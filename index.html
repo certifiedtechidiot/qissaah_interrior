@@ -13,13 +13,13 @@
   <script>document.documentElement.classList.add('js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <nav class="container nav-bar" aria-label="Primary navigation">
       <a class="wordmark" href="#top" aria-label="Qissaah Interior home">Qissaah Interior</a>
 
@@ -45,7 +45,7 @@
           <span class="bag-count" id="bag-count" hidden>0</span>
         </button>
 
-        <button class="btn-primary btn-primary--compact" type="button" data-open-consultation>Book a Consultation</button>
+        <button class="btn-nav-outline" type="button" data-open-consultation>Book a Consultation</button>
 
         <button class="menu-toggle" type="button" id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Toggle navigation menu">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
@@ -66,7 +66,7 @@
       <li><a class="mobile-menu__link" href="#approach">Journal</a></li>
       <li><a class="mobile-menu__link" href="#contact">Contact</a></li>
     </ul>
-    <button class="btn-primary button-md" type="button" data-open-consultation>
+    <button class="btn-outline-action button-md" type="button" data-open-consultation>
       <span>Book a Consultation</span>
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
@@ -86,10 +86,10 @@
 
       <div class="container hero__inner">
         <div class="hero__content">
-          <h1 class="heading-1 hero__title">Design for Modern Living</h1>
+          <h1 class="heading-1 hero__title">Design for<br><span class="hero__title-italic">Modern Living</span></h1>
           <p class="body-3 hero__subtitle">Thoughtfully crafted furniture and interiors shaped for calm, serene everyday living.</p>
           <div class="hero__actions">
-            <a class="btn-primary button-sm" href="#collections">
+            <a class="btn-hero-primary button-sm" href="#collections">
               <span>Explore Collections</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
@@ -115,7 +115,6 @@
               <span class="hero-pager__fill" id="hero-progress-fill"></span>
             </div>
           </div>
-          <p class="hero__caption" id="hero-scene-caption">Natural materials.<br>Better living.</p>
         </div>
       </div>
     </section>
@@ -149,8 +148,8 @@
                 <p class="highlight-card__desc">Solid timber, honed stone, and enduring proportions.</p>
               </div>
               <div class="highlight-card__foot">
-                <span class="circle-arrow circle-arrow--filled" aria-hidden="true">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <span class="square-arrow square-arrow--outline" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
                   </svg>
                 </span>
@@ -168,8 +167,8 @@
                 <p class="highlight-card__desc">Tactile rooms tailored for everyday comfort.</p>
               </div>
               <div class="highlight-card__foot">
-                <span class="circle-arrow circle-arrow--filled" aria-hidden="true">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <span class="square-arrow square-arrow--outline" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
                   </svg>
                 </span>
@@ -253,7 +252,7 @@
                 <h3 class="heading-6 space-card__title">Living Room</h3>
                 <p class="caption-2 space-card__tagline">Relaxed. Refined. Yours.</p>
               </div>
-              <span class="circle-arrow circle-arrow--outline" aria-hidden="true">
+              <span class="square-arrow square-arrow--outline" aria-hidden="true">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
                 </svg>
@@ -270,7 +269,7 @@
                 <h3 class="heading-6 space-card__title">Dining Room</h3>
                 <p class="caption-2 space-card__tagline">Gather in Style.</p>
               </div>
-              <span class="circle-arrow circle-arrow--outline" aria-hidden="true">
+              <span class="square-arrow square-arrow--outline" aria-hidden="true">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
                 </svg>
@@ -287,7 +286,7 @@
                 <h3 class="heading-6 space-card__title">Bedroom</h3>
                 <p class="caption-2 space-card__tagline">Rest Beautifully.</p>
               </div>
-              <span class="circle-arrow circle-arrow--outline" aria-hidden="true">
+              <span class="square-arrow square-arrow--outline" aria-hidden="true">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
                 </svg>
@@ -304,7 +303,7 @@
                 <h3 class="heading-6 space-card__title">Home Office</h3>
                 <p class="caption-2 space-card__tagline">Work Inspired.</p>
               </div>
-              <span class="circle-arrow circle-arrow--outline" aria-hidden="true">
+              <span class="square-arrow square-arrow--outline" aria-hidden="true">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
                 </svg>
@@ -326,7 +325,7 @@
           <h2 class="heading-2 story-copy__title" id="story-heading">Qissaah Interior</h2>
           <p class="body-3 story-copy__lead" id="chapter-lead">More Than Furniture. A Way of Living.</p>
           <p class="body-6 story-copy__body" id="chapter-body">Qissaah Interior was founded on a simple conviction that well designed spaces bring calm, warmth, and connection to everyday life. We collaborate with skilled artisans and architects to craft quiet heirloom pieces.</p>
-          <button class="btn-primary button-sm" type="button" data-open-consultation>
+          <button class="btn-outline-action button-sm" type="button" data-open-consultation>
             <span>Our Story</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
@@ -386,7 +385,7 @@
                 <h3 class="title-4 product-card__title">The Solis Sofa</h3>
                 <p class="caption-5 product-card__price num">From $2,800</p>
               </div>
-              <button class="circle-arrow circle-arrow--outline" type="button" data-quickview="solis-sofa" aria-label="Inspect The Solis Sofa">
+              <button class="square-arrow square-arrow--outline" type="button" data-quickview="solis-sofa" aria-label="Inspect The Solis Sofa">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
                 </svg>
@@ -403,7 +402,7 @@
                 <h3 class="title-4 product-card__title">Lume Dining Table</h3>
                 <p class="caption-5 product-card__price num">From $1,950</p>
               </div>
-              <button class="circle-arrow circle-arrow--outline" type="button" data-quickview="lume-table" aria-label="Inspect Lume Dining Table">
+              <button class="square-arrow square-arrow--outline" type="button" data-quickview="lume-table" aria-label="Inspect Lume Dining Table">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
                 </svg>
@@ -420,7 +419,7 @@
                 <h3 class="title-4 product-card__title">Terra Lounge Chair</h3>
                 <p class="caption-5 product-card__price num">From $1,420</p>
               </div>
-              <button class="circle-arrow circle-arrow--outline" type="button" data-quickview="terra-chair" aria-label="Inspect Terra Lounge Chair">
+              <button class="square-arrow square-arrow--outline" type="button" data-quickview="terra-chair" aria-label="Inspect Terra Lounge Chair">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
                 </svg>
@@ -437,7 +436,7 @@
                 <h3 class="title-4 product-card__title">Aurelia Bed</h3>
                 <p class="caption-5 product-card__price num">From $2,600</p>
               </div>
-              <button class="circle-arrow circle-arrow--outline" type="button" data-quickview="aurelia-bed" aria-label="Inspect Aurelia Bed">
+              <button class="square-arrow square-arrow--outline" type="button" data-quickview="aurelia-bed" aria-label="Inspect Aurelia Bed">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
                 </svg>
@@ -454,7 +453,7 @@
                 <h3 class="title-4 product-card__title">Nora Cabinet</h3>
                 <p class="caption-5 product-card__price num">From $1,780</p>
               </div>
-              <button class="circle-arrow circle-arrow--outline" type="button" data-quickview="nora-sideboard" aria-label="Inspect Nora Cabinet">
+              <button class="square-arrow square-arrow--outline" type="button" data-quickview="nora-sideboard" aria-label="Inspect Nora Cabinet">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
                 </svg>
@@ -471,7 +470,7 @@
                 <h3 class="title-4 product-card__title">Vale Floor Lamp</h3>
                 <p class="caption-5 product-card__price num">From $480</p>
               </div>
-              <button class="circle-arrow circle-arrow--outline" type="button" data-quickview="vale-lamp" aria-label="Inspect Vale Floor Lamp">
+              <button class="square-arrow square-arrow--outline" type="button" data-quickview="vale-lamp" aria-label="Inspect Vale Floor Lamp">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
                 </svg>
@@ -614,7 +613,7 @@
           <label class="field-label" for="consult-notes">Project vision and saved pieces</label>
           <textarea class="field-input field-textarea" id="consult-notes" name="notes" placeholder="Dimensions, preferred timber or stone palette, and timeline."></textarea>
         </div>
-        <button class="btn-primary button-sm" type="submit" style="width: 100%;">
+        <button class="btn-outline-action button-sm" type="submit" style="width: 100%;">
           <span>Request Studio Session</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
@@ -657,7 +656,7 @@
           <span class="spec-value" id="qv-dimensions"></span>
         </div>
       </div>
-      <button class="btn-primary button-sm" type="button" id="qv-save-btn" style="width: 100%;">
+      <button class="btn-outline-action button-sm" type="button" id="qv-save-btn" style="width: 100%;">
         <span>Add to Inquiry List</span>
       </button>
     </div>

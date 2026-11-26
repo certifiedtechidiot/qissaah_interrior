@@ -1,7 +1,7 @@
 :root {
   color-scheme: light;
 
-  /* Spacing scale (aligned to Tailwind & AI Design Skill B2 + Hallmark tokens) */
+  /* Spacing scale (Tailwind & AI Design Skill B2 + Hallmark tokens) */
   --space-0: 0px;
   --space-3xs: 2px;
   --space-2xs: 4px;
@@ -19,7 +19,7 @@
   --section-gap: 96px;
   --section-gap-l: 128px;
 
-  /* Type scale (Tailwind scale steps + fluid responsive clamps) */
+  /* Type scale (+27% boosted hero display scale) */
   --text-xs: 0.75rem;      /* 12px / 16px */
   --text-sm: 0.875rem;     /* 14px / 20px */
   --text-md: 1rem;         /* 16px / 24px */
@@ -30,10 +30,10 @@
   --text-4xl: 2.25rem;     /* 36px / 40px */
   --text-5xl: 3rem;        /* 48px / 48px */
   --text-6xl: 3.75rem;     /* 60px / 60px */
-  --text-7xl: 4.5rem;      /* 72px / 72px */
+  --text-7xl: 4.75rem;     /* 76px architectural editorial display */
 
   /* Semantic typography roles */
-  --text-display: var(--text-6xl);
+  --text-display: var(--text-7xl);
   --text-display-s: var(--text-5xl);
   --text-section: var(--text-4xl);
   --text-title: var(--text-xl);
@@ -53,7 +53,7 @@
   --color-paper-2: oklch(93.4% 0.011 76);
   --color-paper-3: oklch(89.5% 0.013 74);
   --color-card: oklch(98.2% 0.005 80);
-  --color-card-edge: oklch(88.2% 0.011 74);
+  --color-card-edge: oklch(87% 0.012 74);
 
   --color-ink: oklch(18.5% 0.010 62);
   --color-ink-2: oklch(39% 0.012 62);
@@ -65,23 +65,28 @@
   --color-obsidian-2: oklch(21.5% 0.010 62);
   --color-obsidian-rule: oklch(29% 0.010 62);
   --color-ivory: oklch(96.8% 0.006 78);
-  --color-ivory-muted: oklch(74% 0.010 72);
+  --color-ivory-muted: oklch(78% 0.009 72);
 
-  /* Accent (Cool Slate & Architectural Bronze Focus — avoids Gate 65 clay) */
+  /* Accent & State Tokens */
   --color-accent: oklch(38% 0.055 248);
   --color-accent-ink: oklch(96.8% 0.006 78);
   --color-focus: oklch(48% 0.090 248);
   --color-error: oklch(52% 0.175 27);
   --color-success: oklch(48% 0.115 152);
 
-  /* Scrims & Shadows */
-  --hero-scrim-start: oklch(15% 0.010 62 / 0.72);
-  --hero-scrim-mid: oklch(15% 0.010 62 / 0.42);
-  --hero-scrim-end: oklch(15% 0.010 62 / 0.14);
-  --hero-bar-bg: oklch(98% 0.004 80 / 0.16);
-  --hero-bar-track: oklch(98% 0.004 80 / 0.35);
+  /* Hero Scrims, Overlay Header Tokens & Architectural Shadows */
+  --hero-scrim-start: oklch(12% 0.010 62 / 0.80);
+  --hero-scrim-mid: oklch(12% 0.010 62 / 0.56);
+  --hero-scrim-soft: oklch(12% 0.010 62 / 0.22);
+  --hero-scrim-end: oklch(12% 0.010 62 / 0.02);
+  --hero-top-scrim: oklch(12% 0.010 62 / 0.60);
+  --hero-top-mid: oklch(12% 0.010 62 / 0.24);
+  --hero-nav-rule: oklch(96.8% 0.006 78 / 0.18);
+  --hero-nav-border: oklch(96.8% 0.006 78 / 0.48);
+  --hero-bar-bg: oklch(98% 0.004 80 / 0.14);
+  --hero-bar-track: oklch(98% 0.004 80 / 0.34);
   --modal-backdrop: oklch(14% 0.010 62 / 0.58);
-  --shadow-card: 0 2px 10px -2px oklch(20% 0.015 62 / 0.06);
+  --shadow-card: 0 2px 10px -2px oklch(20% 0.015 62 / 0.05);
   --shadow-floating: 0 12px 32px -8px oklch(16% 0.012 62 / 0.12);
   --shadow-modal: 0 24px 64px -16px oklch(14% 0.012 62 / 0.28);
 
@@ -90,22 +95,22 @@
   --font-body: "Manrope", system-ui, sans-serif;
   --font-outlier: "EB Garamond", Georgia, serif;
 
-  --tracking-display: -0.02em;
-  --tracking-heading: -0.015em;
+  --tracking-display: -0.026em;
+  --tracking-heading: -0.016em;
   --display-weight: 500;
   --heading-weight: 500;
 
   /* Container & Grid */
-  --container: 1360px;
+  --container: 1400px;
   --gutter: 48px;
   --gap-columns: 24px;
 
-  /* Radii (Tailwind scale + nested formula: inner = outer - 8px padding) */
-  --radius-sm: 6px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-card: 16px;
-  --radius-pill: 9999px;
+  /* Architectural Sharp Radii (0-4px craft system) */
+  --radius-sm: 2px;
+  --radius-md: 2px;
+  --radius-lg: 4px;
+  --radius-card: 3px;
+  --radius-control: 2px;
 
   --rule-hair: 1px;
   --rule-head: 1px;
@@ -119,6 +124,12 @@
   --z-modal: 400;
   --z-toast: 500;
   --z-tooltip: 600;
+}
+
+@media (max-width: 80rem) {
+  :root {
+    --text-display: var(--text-7xl);
+  }
 }
 
 @media (max-width: 64rem) {

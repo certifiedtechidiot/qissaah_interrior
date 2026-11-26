@@ -90,19 +90,34 @@
     }
   };
 
-  const HERO_CAPTIONS = [
-    'Natural materials.<br>Better living.',
-    'Honest joinery.<br>Gather in light.',
-    'Quiet corners.<br>Made to endure.'
-  ];
-
   const savedIds = new Set();
+
+  /* 0. Overlay Header Scroll Transition */
+  const siteHeader = document.getElementById('site-header');
+  const heroEl = document.querySelector('.hero');
+  if (siteHeader && heroEl) {
+    let navTicking = false;
+    const syncHeaderState = () => {
+      navTicking = false;
+      const rect = heroEl.getBoundingClientRect();
+      siteHeader.classList.toggle('is-scrolled', rect.bottom <= 84);
+    };
+    window.addEventListener('scroll', () => {
+      if (!navTicking) {
+        navTicking = true;
+        requestAnimationFrame(syncHeaderState);
+      }
+    }, { passive: true });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(syncHeaderState, { rootMargin: '-84px 0px 0px 0px', threshold: 0 }).observe(heroEl);
+    }
+    syncHeaderState();
+  }
 
   /* 1. Hero Slider */
   const heroSlides = Array.from(document.querySelectorAll('[data-hero-slide]'));
   const pagerBtns = Array.from(document.querySelectorAll('[data-slide-target]'));
   const heroProgress = document.getElementById('hero-progress-fill');
-  const heroCaption = document.getElementById('hero-scene-caption');
   let activeSlide = 0;
 
   function setHeroSlide(idx) {
@@ -111,9 +126,6 @@
     pagerBtns.forEach((b, i) => b.setAttribute('aria-selected', String(i === idx)));
     if (heroProgress) {
       heroProgress.style.transform = `scaleX(${(idx + 1) / heroSlides.length})`;
-    }
-    if (heroCaption && HERO_CAPTIONS[idx]) {
-      heroCaption.innerHTML = HERO_CAPTIONS[idx];
     }
   }
 
@@ -385,7 +397,7 @@
         <div class="bag-empty">
           <p class="body-3" style="color: var(--color-ink); margin-bottom: var(--space-xs);">Your inquiry list is empty.</p>
           <p class="body-6" style="color: var(--color-muted); margin-bottom: var(--space-md);">Inspect any signature piece to add custom dimensions or finish requests.</p>
-          <a class="btn-primary button-sm" href="#collections" id="bag-browse-link">Browse Curated Pieces</a>
+          <a class="btn-outline-action button-sm" href="#collections" id="bag-browse-link">Browse Curated Pieces</a>
         </div>`;
       const browseLink = document.getElementById('bag-browse-link');
       if (browseLink) browseLink.addEventListener('click', closeAllModals);
@@ -414,7 +426,7 @@
 
     bagContents.innerHTML = `
       <div class="bag-list">${itemsHtml}</div>
-      <button class="btn-primary button-sm" type="button" id="bag-consult-btn" style="width: 100%;">Request Quote for Saved Pieces</button>`;
+      <button class="btn-outline-action button-sm" type="button" id="bag-consult-btn" style="width: 100%;">Request Quote for Saved Pieces</button>`;
 
     bagContents.querySelectorAll('[data-remove-bag]').forEach((btn) => {
       btn.addEventListener('click', () => {
