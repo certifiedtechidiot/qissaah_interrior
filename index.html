@@ -198,8 +198,8 @@
               <circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8"/><path d="M3.6 15h16.8"/><path d="M12 3a14.5 14.5 0 0 1 0 18"/><path d="M12 3a14.5 14.5 0 0 0 0 18"/>
             </svg>
             <div>
-              <span class="proof-item__value num" data-client-metric="countries">25+</span>
-              <span class="proof-item__label">Countries</span>
+              <span class="proof-item__value num" data-client-metric="cities">75+</span>
+              <span class="proof-item__label">Cities</span>
             </div>
           </div>
 
@@ -318,14 +318,14 @@
     <section class="story-section" id="about" aria-labelledby="story-heading">
       <div class="container story-grid">
         <figure class="story-media" data-slot="story-lounge" data-alt="Quiet reading corner beside sunlit glass windows" data-reveal style="--i: 0; margin: 0;">
-          <img src="./assets/images/story-lounge.jpg" width="1200" height="896" alt="Quiet architectural reading lounge with cream linen daybed and travertine side table beside forest windows" loading="lazy">
+          <img id="story-image" src="./assets/images/story-lounge.jpg" width="1200" height="896" alt="Quiet architectural reading lounge with cream linen daybed and travertine side table beside forest windows" loading="lazy">
         </figure>
 
         <div class="story-copy" data-reveal style="--i: 1;">
           <h2 class="heading-2 story-copy__title" id="story-heading">Qissaah Interior</h2>
           <p class="body-3 story-copy__lead" id="chapter-lead">More Than Furniture. A Way of Living.</p>
           <p class="body-6 story-copy__body" id="chapter-body">Qissaah Interior was founded on a simple conviction that well designed spaces bring calm, warmth, and connection to everyday life. We collaborate with skilled artisans and architects to craft quiet heirloom pieces.</p>
-          <button class="btn-outline-action button-sm" type="button" data-open-consultation>
+          <button class="btn-olive-outline button-sm" type="button" data-open-consultation>
             <span>Our Story</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
@@ -334,10 +334,10 @@
         </div>
 
         <div class="story-chapters" role="tablist" aria-label="Studio chapters" data-reveal style="--i: 2;">
-          <button class="chapter-btn" type="button" role="tab" aria-selected="true" data-chapter="people">People</button>
+          <button class="chapter-btn" type="button" role="tab" aria-selected="true" data-chapter="design">Design</button>
           <button class="chapter-btn" type="button" role="tab" aria-selected="false" data-chapter="materials">Materials</button>
           <button class="chapter-btn" type="button" role="tab" aria-selected="false" data-chapter="sustainability">Sustainability</button>
-          <button class="chapter-btn" type="button" role="tab" aria-selected="false" data-chapter="process">Our Process</button>
+          <button class="chapter-btn" type="button" role="tab" aria-selected="false" data-chapter="craftsmanship">Craftsmanship</button>
         </div>
       </div>
     </section>
@@ -345,7 +345,8 @@
     <!-- Mandatory Editorial Tagline Reveal Section (AI Design Skill B11) -->
     <section class="tagline-section" aria-label="Studio manifesto">
       <div class="container">
-        <div class="tagline-reveal">
+        <div class="tagline-reveal" data-reveal>
+          <p class="tagline-eyebrow">Our Philosophy</p>
           <h2 class="heading-3 tagline-reveal__text" id="tagline-reveal-text">Every room holds a quiet story shaped in honest timber, natural stone, and sunlit air.</h2>
         </div>
       </div>
@@ -379,6 +380,7 @@
           <article class="product-card" data-category="Seating" data-product-id="solis-sofa" data-reveal style="--i: 0;">
             <figure class="product-card__media" data-slot="prod-solis" data-alt="The Solis Sofa in natural cream linen" style="margin: 0;">
               <img src="./assets/images/prod-solis-sofa.jpg" width="1024" height="1024" alt="The Solis Sofa upholstered in natural cream linen in a sunlit room" loading="lazy">
+              <button class="product-card__quickview" type="button" data-quickview="solis-sofa">Quick View</button>
             </figure>
             <div class="product-card__body">
               <div>
@@ -396,6 +398,7 @@
           <article class="product-card" data-category="Dining" data-product-id="lume-table" data-reveal style="--i: 1;">
             <figure class="product-card__media" data-slot="prod-lume" data-alt="Lume Dining Table in smoked walnut" style="margin: 0;">
               <img src="./assets/images/prod-lume-table.jpg" width="1024" height="1024" alt="Lume Dining Table crafted from solid smoked dark oak with architectural fluted base" loading="lazy">
+              <button class="product-card__quickview" type="button" data-quickview="lume-table">Quick View</button>
             </figure>
             <div class="product-card__body">
               <div>
@@ -413,6 +416,7 @@
           <article class="product-card" data-category="Seating" data-product-id="terra-chair" data-reveal style="--i: 2;">
             <figure class="product-card__media" data-slot="prod-terra" data-alt="Terra Lounge Chair in saddle cognac velvet" style="margin: 0;">
               <img src="./assets/images/prod-terra-chair.jpg" width="1024" height="1024" alt="Terra Lounge Chair upholstered in warm cognac wool velvet" loading="lazy">
+              <button class="product-card__quickview" type="button" data-quickview="terra-chair">Quick View</button>
             </figure>
             <div class="product-card__body">
               <div>
@@ -430,6 +434,7 @@
           <article class="product-card" data-category="Bedroom" data-product-id="aurelia-bed" data-reveal style="--i: 3;">
             <figure class="product-card__media" data-slot="prod-aurelia" data-alt="Aurelia Bed in draped ivory linen" style="margin: 0;">
               <img src="./assets/images/prod-aurelia-bed.jpg" width="1200" height="900" alt="Aurelia Bed crafted in solid warm timber with draped ivory linen" loading="lazy">
+              <button class="product-card__quickview" type="button" data-quickview="aurelia-bed">Quick View</button>
             </figure>
             <div class="product-card__body">
               <div>
@@ -447,6 +452,7 @@
           <article class="product-card" data-category="Dining" data-product-id="nora-sideboard" data-reveal style="--i: 4;">
             <figure class="product-card__media" data-slot="prod-nora" data-alt="Nora Cabinet in solid walnut with stoneware vessels" style="margin: 0;">
               <img src="./assets/images/prod-nora-sideboard.jpg" width="960" height="960" alt="Nora architectural walnut shelving cabinet holding ceramic stoneware vessels" loading="lazy">
+              <button class="product-card__quickview" type="button" data-quickview="nora-sideboard">Quick View</button>
             </figure>
             <div class="product-card__body">
               <div>
@@ -464,6 +470,7 @@
           <article class="product-card" data-category="Lighting" data-product-id="vale-lamp" data-reveal style="--i: 5;">
             <figure class="product-card__media" data-slot="prod-vale" data-alt="Vale Floor Lamp in brushed bronze" style="margin: 0;">
               <img src="./assets/images/prod-vale-lamp.jpg" width="1024" height="1024" alt="Vale Floor Lamp with minimalist brushed bronze dome shade beside neutral drapery" loading="lazy">
+              <button class="product-card__quickview" type="button" data-quickview="vale-lamp">Quick View</button>
             </figure>
             <div class="product-card__body">
               <div>
@@ -477,6 +484,49 @@
               </button>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Bespoke Consultation & Material Palette Banner -->
+    <section class="palette-banner" id="materials" aria-labelledby="palette-heading">
+      <div class="container palette-grid">
+        <div class="palette-copy" data-reveal style="--i: 0;">
+          <p class="palette-eyebrow">Private Consultation</p>
+          <h2 class="heading-2 palette-title" id="palette-heading">Bring Quiet Craftsmanship Into Your Space</h2>
+          <p class="body-3 palette-desc">Work directly with our architectural studio on tailored spatial planning, bespoke joinery, and curated natural finishes.</p>
+          <div class="palette-actions">
+            <button class="btn-terracotta button-md" type="button" data-open-consultation>
+              <span>Book a Consultation</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+              </svg>
+            </button>
+            <button class="btn-cream-outline button-md" type="button" data-open-consultation="samples">Order Material Samples</button>
+          </div>
+        </div>
+
+        <div class="swatch-grid" data-reveal style="--i: 1;">
+          <div class="swatch-tile">
+            <div class="swatch-tile__surface swatch-tile__surface--oak">
+              <img src="./assets/images/craft-joinery.jpg" width="960" height="960" alt="Smoked Oak timber grain swatch" loading="lazy">
+            </div>
+            <span class="swatch-tile__label">Smoked Oak</span>
+          </div>
+          <div class="swatch-tile">
+            <div class="swatch-tile__surface swatch-tile__surface--travertine" aria-hidden="true"></div>
+            <span class="swatch-tile__label">Natural Travertine</span>
+          </div>
+          <div class="swatch-tile">
+            <div class="swatch-tile__surface swatch-tile__surface--linen">
+              <img src="./assets/images/detail-boucle.jpg" width="1024" height="1024" alt="Woven Linen upholstery swatch" loading="lazy">
+            </div>
+            <span class="swatch-tile__label">Woven Linen</span>
+          </div>
+          <div class="swatch-tile">
+            <div class="swatch-tile__surface swatch-tile__surface--bronze" aria-hidden="true"></div>
+            <span class="swatch-tile__label">Brushed Bronze</span>
+          </div>
         </div>
       </div>
     </section>
@@ -529,7 +579,7 @@
             <li><a href="#about">Our Story</a></li>
             <li><a href="#approach">Craftsmanship</a></li>
             <li><a href="#about" data-chapter-jump="sustainability">Sustainability</a></li>
-            <li><a href="#about" data-chapter-jump="process">Design Process</a></li>
+            <li><a href="#about" data-chapter-jump="craftsmanship">Design Process</a></li>
             <li><a href="#contact" data-open-consultation>Studio Appointments</a></li>
           </ul>
         </div>

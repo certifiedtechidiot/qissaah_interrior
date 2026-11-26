@@ -72,21 +72,29 @@
   };
 
   const CHAPTERS = {
-    people: {
+    design: {
       lead: 'More Than Furniture. A Way of Living.',
-      body: 'Qissaah Interior was founded on a simple conviction that well designed spaces bring calm, warmth, and connection to everyday life. We collaborate with skilled artisans and architects to craft quiet heirloom pieces.'
+      body: 'Qissaah Interior was founded on a simple conviction that well designed spaces bring calm, warmth, and connection to everyday life. We collaborate with skilled artisans and architects to craft quiet heirloom pieces.',
+      img: './assets/images/story-lounge.jpg',
+      alt: 'Quiet architectural reading lounge with cream linen daybed and travertine side table beside forest windows'
     },
     materials: {
       lead: 'Timber, Stone, and Tactile Fibres.',
-      body: 'Every room begins with honest raw materials selected for patina and touch. Kiln dried walnut, honed travertine, brushed bronze, and unbleached Belgian linen age gracefully alongside daily life.'
+      body: 'Every room begins with honest raw materials selected for patina and touch. Kiln dried walnut, honed travertine, brushed bronze, and unbleached Belgian linen age gracefully alongside daily life.',
+      img: './assets/images/craft-joinery.jpg',
+      alt: 'Close up of sculpted solid walnut wood grain and architectural table edge'
     },
     sustainability: {
       lead: 'Built Once, Built to Endure.',
-      body: 'We source FSC certified regional hardwoods, natural plant oil finishes free of harsh solvents, and removable upholstery covers so pieces remain repairable for decades.'
+      body: 'We source FSC certified regional hardwoods, natural plant oil finishes free of harsh solvents, and removable upholstery covers so pieces remain repairable for decades.',
+      img: './assets/images/detail-boucle.jpg',
+      alt: 'Detail of curved cream boucle sofa upholstery and deep espresso wool cushion'
     },
-    process: {
+    craftsmanship: {
       lead: 'From Architectural Brief to Installation.',
-      body: 'Each commission moves from spatial planning and custom millwork drawings to studio sampling and white glove placement inside your finished residence.'
+      body: 'Each commission moves from spatial planning and custom millwork drawings to studio sampling and white glove placement inside your finished residence.',
+      img: './assets/images/intro-dining.jpg',
+      alt: 'Warm oak dining table surrounded by cream boucle chairs under a limestone dome pendant'
     }
   };
 
@@ -135,6 +143,7 @@
   const chapterBtns = Array.from(document.querySelectorAll('[data-chapter]'));
   const chapterLead = document.getElementById('chapter-lead');
   const chapterBody = document.getElementById('chapter-body');
+  const storyImage = document.getElementById('story-image');
 
   function setChapter(key) {
     const ch = CHAPTERS[key];
@@ -142,6 +151,14 @@
     chapterBtns.forEach((b) => b.setAttribute('aria-selected', String(b.dataset.chapter === key)));
     if (chapterLead) chapterLead.textContent = ch.lead;
     if (chapterBody) chapterBody.textContent = ch.body;
+    if (storyImage && ch.img) {
+      storyImage.style.opacity = '0.35';
+      setTimeout(() => {
+        storyImage.src = ch.img;
+        storyImage.alt = ch.alt;
+        storyImage.style.opacity = '1';
+      }, 140);
+    }
   }
 
   chapterBtns.forEach((btn) => {
