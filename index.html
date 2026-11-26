@@ -13,7 +13,7 @@
   <script>document.documentElement.classList.add('js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
@@ -119,12 +119,34 @@
       </div>
     </section>
 
-    <!-- Section 2: Editorial Overview & Asymmetric Collage -->
+    <!-- Section 2: Asymmetric 2-Column Editorial Spread -->
     <section class="intro-section" id="approach" aria-labelledby="approach-heading">
       <div class="container intro-grid">
         <div class="intro-copy" data-reveal style="--i: 0;">
+          <p class="eyebrow">01 — Our Approach</p>
           <h2 class="heading-2 intro-copy__title" id="approach-heading">Spaces that Inspire a Calmer, Richer Life</h2>
-          <p class="body-3 intro-copy__body">We design contemporary furniture and bespoke interiors that unite comfort, honest joinery, and the quiet clarity of natural living.</p>
+          <p class="intro-copy__body">We design contemporary furniture and bespoke interiors that unite comfort, honest joinery, and the quiet clarity of natural living.</p>
+
+          <div class="intro-pillars">
+            <a class="intro-pillar" href="#collections" data-filter-jump="Dining">
+              <span class="intro-pillar__num num">01</span>
+              <div class="intro-pillar__text">
+                <h3 class="intro-pillar__title">Crafted for Quality</h3>
+                <p class="intro-pillar__desc">Solid timber, honed stone, and enduring proportions.</p>
+              </div>
+              <span class="intro-pillar__arrow" aria-hidden="true">→</span>
+            </a>
+
+            <a class="intro-pillar" href="#collections" data-filter-jump="Seating">
+              <span class="intro-pillar__num num">02</span>
+              <div class="intro-pillar__text">
+                <h3 class="intro-pillar__title">Designed for Real Life</h3>
+                <p class="intro-pillar__desc">Tactile rooms tailored for everyday comfort.</p>
+              </div>
+              <span class="intro-pillar__arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+
           <a class="text-action" href="#about">
             <span>Discover Our Approach</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -135,104 +157,48 @@
 
         <figure class="intro-feature-photo" data-slot="approach-main" data-alt="Architectural dining room with oak table and dome pendant" data-reveal style="--i: 1; margin: 0;">
           <img src="./assets/images/intro-dining.jpg" width="1200" height="896" alt="Warm oak dining table surrounded by cream boucle chairs under a limestone dome pendant" loading="lazy">
+          <figcaption class="intro-feature-photo__caption" data-keep>Solid Walnut &amp; Honed Limestone</figcaption>
         </figure>
-
-        <div class="intro-highlights" data-reveal style="--i: 2;">
-          <a class="highlight-card" href="#collections" data-filter-jump="Dining">
-            <figure class="highlight-card__media" data-slot="craft-detail" data-alt="Close up of handcrafted dark walnut wood edge" style="margin: 0;">
-              <img src="./assets/images/craft-joinery.jpg" width="960" height="960" alt="Close up of sculpted solid walnut wood grain and architectural table edge" loading="lazy">
-            </figure>
-            <div class="highlight-card__body">
-              <div>
-                <h3 class="heading-6 highlight-card__title">Crafted for Quality</h3>
-                <p class="highlight-card__desc">Solid timber, honed stone, and enduring proportions.</p>
-              </div>
-              <div class="highlight-card__foot">
-                <span class="square-arrow square-arrow--outline" aria-hidden="true">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-                  </svg>
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a class="highlight-card" href="#collections" data-filter-jump="Seating">
-            <figure class="highlight-card__media" data-slot="boucle-detail" data-alt="Close up of curved cream boucle sofa and woven throw cushion" style="margin: 0;">
-              <img src="./assets/images/detail-boucle.jpg" width="1024" height="1024" alt="Detail of curved cream boucle sofa upholstery and deep espresso wool cushion" loading="lazy">
-            </figure>
-            <div class="highlight-card__body">
-              <div>
-                <h3 class="heading-6 highlight-card__title">Designed for Real Life</h3>
-                <p class="highlight-card__desc">Tactile rooms tailored for everyday comfort.</p>
-              </div>
-              <div class="highlight-card__foot">
-                <span class="square-arrow square-arrow--outline" aria-hidden="true">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-                  </svg>
-                </span>
-              </div>
-            </div>
-          </a>
-        </div>
       </div>
     </section>
 
-    <!-- Section 3: Proof & Heritage Strip -->
+    <!-- Section 3: Architectural Ledger Band -->
     <section class="proof-section" aria-label="Studio benchmarks">
       <div class="container">
         <div class="proof-strip" data-reveal>
           <div class="proof-item">
-            <svg class="proof-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M4 11V7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v4"/><path d="M2 11a2 2 0 0 1 2 2v3h16v-3a2 2 0 1 1 4 0v5H0v-5a2 2 0 0 1 2-2Z"/><path d="M4 18v2"/><path d="M20 18v2"/>
-            </svg>
-            <div>
-              <span class="proof-item__value num" data-client-metric="homes">10K+</span>
-              <span class="proof-item__label">Homes Designed</span>
-            </div>
+            <span class="proof-item__value num" data-client-metric="homes">10K+</span>
+            <span class="proof-item__label">Homes Designed</span>
           </div>
 
           <div class="proof-item">
-            <svg class="proof-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8"/><path d="M3.6 15h16.8"/><path d="M12 3a14.5 14.5 0 0 1 0 18"/><path d="M12 3a14.5 14.5 0 0 0 0 18"/>
-            </svg>
-            <div>
-              <span class="proof-item__value num" data-client-metric="cities">75+</span>
-              <span class="proof-item__label">Cities</span>
-            </div>
+            <span class="proof-item__value num" data-client-metric="cities">75+</span>
+            <span class="proof-item__label">Cities Worldwide</span>
           </div>
 
           <div class="proof-item">
-            <svg class="proof-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="8" r="3.5"/><path d="M5 19a7 7 0 0 1 14 0"/><circle cx="19" cy="9" r="2.2"/><path d="M22 18a4.5 4.5 0 0 0-3-4.2"/><circle cx="5" cy="9" r="2.2"/><path d="M2 18a4.5 4.5 0 0 1 3-4.2"/>
-            </svg>
-            <div>
-              <span class="proof-item__value num" data-client-metric="satisfaction">98%</span>
-              <span class="proof-item__label">Client Satisfaction</span>
-            </div>
+            <span class="proof-item__value num" data-client-metric="satisfaction">98%</span>
+            <span class="proof-item__label">Client Satisfaction</span>
           </div>
 
           <div class="proof-item">
-            <svg class="proof-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M19 4C11 4 6 9 6 17c8 0 13-5 13-13Z"/><path d="M6 17 3 20"/><path d="M10 13l5-5"/>
-            </svg>
-            <div>
-              <span class="proof-item__value num" data-client-metric="years">12+</span>
-              <span class="proof-item__label">Years of Craft</span>
-            </div>
+            <span class="proof-item__value num" data-client-metric="years">12+</span>
+            <span class="proof-item__label">Years of Craft</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 4: Explore by Space -->
+    <!-- Section 4: Explore by Space (Borderless Gallery Cards) -->
     <section class="spaces-section" id="spaces" aria-labelledby="spaces-heading">
       <div class="container">
         <div class="section-head" data-reveal>
-          <h2 class="heading-2 section-head__title" id="spaces-heading">Find Your Perfect Space</h2>
+          <div>
+            <p class="eyebrow">02 — Spaces</p>
+            <h2 class="heading-2 section-head__title" id="spaces-heading">Find Your Perfect Space</h2>
+          </div>
           <div class="section-head__aside">
-            <p class="body-6 section-head__copy">From quiet corners to open living, explore curated furniture and interior solutions for every room.</p>
+            <p class="section-head__copy">From quiet corners to open living, explore curated furniture and interior solutions for every room.</p>
             <a class="text-action" href="#collections" data-filter-jump="All">
               <span>View All Spaces</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -248,32 +214,24 @@
               <img src="./assets/images/space-living.jpg" width="1200" height="900" alt="Minimalist sunlit living room with linen sofas, wood ceiling, and warm stone pillars" loading="lazy">
             </figure>
             <div class="space-card__body">
-              <div>
-                <h3 class="heading-6 space-card__title">Living Room</h3>
-                <p class="caption-2 space-card__tagline">Relaxed. Refined. Yours.</p>
+              <div class="space-card__head">
+                <h3 class="space-card__title">Living Room</h3>
+                <span class="space-card__arrow" aria-hidden="true">→</span>
               </div>
-              <span class="square-arrow square-arrow--outline" aria-hidden="true">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-                </svg>
-              </span>
+              <p class="space-card__tagline">Relaxed. Refined. Yours.</p>
             </div>
           </a>
 
-          <a class="space-card" href="#collections" data-space-card="Dining Room" data-filter-jump="Dining" data-reveal style="--i: 1;">
+          <a class="space-card space-card--stagger" href="#collections" data-space-card="Dining Room" data-filter-jump="Dining" data-reveal style="--i: 1;">
             <figure class="space-card__media" data-slot="space-dining" data-alt="Architectural dining room with oak table and armchairs" style="margin: 0;">
               <img src="./assets/images/space-dining.jpg" width="1200" height="900" alt="Warm architectural dining room with sculptural oak table and cream upholstered chairs" loading="lazy">
             </figure>
             <div class="space-card__body">
-              <div>
-                <h3 class="heading-6 space-card__title">Dining Room</h3>
-                <p class="caption-2 space-card__tagline">Gather in Style.</p>
+              <div class="space-card__head">
+                <h3 class="space-card__title">Dining Room</h3>
+                <span class="space-card__arrow" aria-hidden="true">→</span>
               </div>
-              <span class="square-arrow square-arrow--outline" aria-hidden="true">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-                </svg>
-              </span>
+              <p class="space-card__tagline">Gather in Style.</p>
             </div>
           </a>
 
@@ -282,39 +240,31 @@
               <img src="./assets/images/space-bedroom.jpg" width="1200" height="900" alt="Serene modernist bedroom with walnut headboard panelling and warm sunlit linen bedding" loading="lazy">
             </figure>
             <div class="space-card__body">
-              <div>
-                <h3 class="heading-6 space-card__title">Bedroom</h3>
-                <p class="caption-2 space-card__tagline">Rest Beautifully.</p>
+              <div class="space-card__head">
+                <h3 class="space-card__title">Bedroom</h3>
+                <span class="space-card__arrow" aria-hidden="true">→</span>
               </div>
-              <span class="square-arrow square-arrow--outline" aria-hidden="true">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-                </svg>
-              </span>
+              <p class="space-card__tagline">Rest Beautifully.</p>
             </div>
           </a>
 
-          <a class="space-card" href="#collections" data-space-card="Home Office" data-filter-jump="Lighting" data-reveal style="--i: 3;">
+          <a class="space-card space-card--stagger" href="#collections" data-space-card="Home Office" data-filter-jump="Lighting" data-reveal style="--i: 3;">
             <figure class="space-card__media" data-slot="space-office" data-alt="Bespoke architectural home office study" style="margin: 0;">
               <img src="./assets/images/space-office.jpg" width="1280" height="853" alt="Architectural timber library and private study with floor to ceiling oak shelving" loading="lazy">
             </figure>
             <div class="space-card__body">
-              <div>
-                <h3 class="heading-6 space-card__title">Home Office</h3>
-                <p class="caption-2 space-card__tagline">Work Inspired.</p>
+              <div class="space-card__head">
+                <h3 class="space-card__title">Home Office</h3>
+                <span class="space-card__arrow" aria-hidden="true">→</span>
               </div>
-              <span class="square-arrow square-arrow--outline" aria-hidden="true">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-                </svg>
-              </span>
+              <p class="space-card__tagline">Work Inspired.</p>
             </div>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Section 5: Brand Story Split -->
+    <!-- Section 5: Brand Story Split (Deep Olive Cinematic Band) -->
     <section class="story-section" id="about" aria-labelledby="story-heading">
       <div class="container story-grid">
         <figure class="story-media" data-slot="story-lounge" data-alt="Quiet reading corner beside sunlit glass windows" data-reveal style="--i: 0; margin: 0;">
@@ -322,179 +272,127 @@
         </figure>
 
         <div class="story-copy" data-reveal style="--i: 1;">
+          <p class="eyebrow eyebrow--light">The Studio</p>
           <h2 class="heading-2 story-copy__title" id="story-heading">Qissaah Interior</h2>
-          <p class="body-3 story-copy__lead" id="chapter-lead">More Than Furniture. A Way of Living.</p>
-          <p class="body-6 story-copy__body" id="chapter-body">Qissaah Interior was founded on a simple conviction that well designed spaces bring calm, warmth, and connection to everyday life. We collaborate with skilled artisans and architects to craft quiet heirloom pieces.</p>
-          <button class="btn-olive-outline button-sm" type="button" data-open-consultation>
-            <span>Our Story</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-            </svg>
-          </button>
-        </div>
+          <p class="story-copy__lead" id="chapter-lead">More Than Furniture. A Way of Living.</p>
+          <p class="story-copy__body" id="chapter-body">Qissaah Interior was founded on a simple conviction that well designed spaces bring calm, warmth, and connection to everyday life. We collaborate with skilled artisans and architects to craft quiet heirloom pieces.</p>
 
-        <div class="story-chapters" role="tablist" aria-label="Studio chapters" data-reveal style="--i: 2;">
-          <button class="chapter-btn" type="button" role="tab" aria-selected="true" data-chapter="design">Design</button>
-          <button class="chapter-btn" type="button" role="tab" aria-selected="false" data-chapter="materials">Materials</button>
-          <button class="chapter-btn" type="button" role="tab" aria-selected="false" data-chapter="sustainability">Sustainability</button>
-          <button class="chapter-btn" type="button" role="tab" aria-selected="false" data-chapter="craftsmanship">Craftsmanship</button>
+          <div class="story-chapters" role="tablist" aria-label="Studio chapters">
+            <button class="chapter-btn" type="button" role="tab" aria-selected="true" data-chapter="design">Design</button>
+            <button class="chapter-btn" type="button" role="tab" aria-selected="false" data-chapter="materials">Materials</button>
+            <button class="chapter-btn" type="button" role="tab" aria-selected="false" data-chapter="sustainability">Sustainability</button>
+            <button class="chapter-btn" type="button" role="tab" aria-selected="false" data-chapter="craftsmanship">Craftsmanship</button>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Mandatory Editorial Tagline Reveal Section (AI Design Skill B11) -->
+    <!-- Section 6: Monumental Editorial Quote Band -->
     <section class="tagline-section" aria-label="Studio manifesto">
       <div class="container">
         <div class="tagline-reveal" data-reveal>
-          <p class="tagline-eyebrow">Our Philosophy</p>
-          <h2 class="heading-3 tagline-reveal__text" id="tagline-reveal-text">Every room holds a quiet story shaped in honest timber, natural stone, and sunlit air.</h2>
+          <span class="tagline-rule" aria-hidden="true"></span>
+          <p class="eyebrow">Our Philosophy</p>
+          <h2 class="tagline-reveal__text" id="tagline-reveal-text">Every room holds a quiet story shaped in honest timber, natural stone, and sunlit air.</h2>
         </div>
       </div>
     </section>
 
-    <!-- Section 6: Curated Pieces Grid -->
+    <!-- Section 7: Curated Pieces Gallery Catalog -->
     <section class="curated-section" id="collections" aria-labelledby="curated-heading">
       <div class="container">
-        <div class="section-head" data-reveal>
-          <h2 class="heading-2 section-head__title" id="curated-heading">Curated for Inspired Living</h2>
-          <div class="section-head__aside">
-            <p class="body-6 section-head__copy">A handpicked selection of our signature pieces, chosen for their form, warmth, and enduring appeal.</p>
-            <button class="text-action" type="button" id="reset-filter-link" style="border: 0; background: transparent; padding: 0; cursor: pointer;">
-              <span>Shop All Products</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-              </svg>
-            </button>
+        <div class="curated-head" data-reveal>
+          <div>
+            <p class="eyebrow">03 — The Collection</p>
+            <h2 class="heading-2 section-head__title" id="curated-heading">Curated for Inspired Living</h2>
           </div>
-        </div>
 
-        <div class="filter-pills" role="group" aria-label="Filter collection by category">
-          <button class="filter-pill" type="button" aria-pressed="true" data-filter="All">All</button>
-          <button class="filter-pill" type="button" aria-pressed="false" data-filter="Seating">Seating</button>
-          <button class="filter-pill" type="button" aria-pressed="false" data-filter="Dining">Dining</button>
-          <button class="filter-pill" type="button" aria-pressed="false" data-filter="Bedroom">Bedroom</button>
-          <button class="filter-pill" type="button" aria-pressed="false" data-filter="Lighting">Lighting</button>
+          <div class="filter-pills" role="group" aria-label="Filter collection by category">
+            <button class="filter-pill" type="button" aria-pressed="true" data-filter="All">All</button>
+            <button class="filter-pill" type="button" aria-pressed="false" data-filter="Seating">Seating</button>
+            <button class="filter-pill" type="button" aria-pressed="false" data-filter="Dining">Dining</button>
+            <button class="filter-pill" type="button" aria-pressed="false" data-filter="Bedroom">Bedroom</button>
+            <button class="filter-pill" type="button" aria-pressed="false" data-filter="Lighting">Lighting</button>
+          </div>
         </div>
 
         <div class="products-grid" id="products-grid">
           <article class="product-card" data-category="Seating" data-product-id="solis-sofa" data-reveal style="--i: 0;">
             <figure class="product-card__media" data-slot="prod-solis" data-alt="The Solis Sofa in natural cream linen" style="margin: 0;">
               <img src="./assets/images/prod-solis-sofa.jpg" width="1024" height="1024" alt="The Solis Sofa upholstered in natural cream linen in a sunlit room" loading="lazy">
-              <button class="product-card__quickview" type="button" data-quickview="solis-sofa">Quick View</button>
+              <button class="product-card__quickview" type="button" data-keep data-quickview="solis-sofa">Quick View</button>
             </figure>
             <div class="product-card__body">
-              <div>
-                <h3 class="title-4 product-card__title">The Solis Sofa</h3>
-                <p class="caption-5 product-card__price num">From $2,800</p>
-              </div>
-              <button class="square-arrow square-arrow--outline" type="button" data-quickview="solis-sofa" aria-label="Inspect The Solis Sofa">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-                </svg>
-              </button>
+              <h3 class="product-card__title">The Solis Sofa</h3>
+              <p class="product-card__price num">From $2,800</p>
             </div>
           </article>
 
           <article class="product-card" data-category="Dining" data-product-id="lume-table" data-reveal style="--i: 1;">
             <figure class="product-card__media" data-slot="prod-lume" data-alt="Lume Dining Table in smoked walnut" style="margin: 0;">
               <img src="./assets/images/prod-lume-table.jpg" width="1024" height="1024" alt="Lume Dining Table crafted from solid smoked dark oak with architectural fluted base" loading="lazy">
-              <button class="product-card__quickview" type="button" data-quickview="lume-table">Quick View</button>
+              <button class="product-card__quickview" type="button" data-keep data-quickview="lume-table">Quick View</button>
             </figure>
             <div class="product-card__body">
-              <div>
-                <h3 class="title-4 product-card__title">Lume Dining Table</h3>
-                <p class="caption-5 product-card__price num">From $1,950</p>
-              </div>
-              <button class="square-arrow square-arrow--outline" type="button" data-quickview="lume-table" aria-label="Inspect Lume Dining Table">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-                </svg>
-              </button>
+              <h3 class="product-card__title">Lume Dining Table</h3>
+              <p class="product-card__price num">From $1,950</p>
             </div>
           </article>
 
           <article class="product-card" data-category="Seating" data-product-id="terra-chair" data-reveal style="--i: 2;">
             <figure class="product-card__media" data-slot="prod-terra" data-alt="Terra Lounge Chair in saddle cognac velvet" style="margin: 0;">
               <img src="./assets/images/prod-terra-chair.jpg" width="1024" height="1024" alt="Terra Lounge Chair upholstered in warm cognac wool velvet" loading="lazy">
-              <button class="product-card__quickview" type="button" data-quickview="terra-chair">Quick View</button>
+              <button class="product-card__quickview" type="button" data-keep data-quickview="terra-chair">Quick View</button>
             </figure>
             <div class="product-card__body">
-              <div>
-                <h3 class="title-4 product-card__title">Terra Lounge Chair</h3>
-                <p class="caption-5 product-card__price num">From $1,420</p>
-              </div>
-              <button class="square-arrow square-arrow--outline" type="button" data-quickview="terra-chair" aria-label="Inspect Terra Lounge Chair">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-                </svg>
-              </button>
+              <h3 class="product-card__title">Terra Lounge Chair</h3>
+              <p class="product-card__price num">From $1,420</p>
             </div>
           </article>
 
           <article class="product-card" data-category="Bedroom" data-product-id="aurelia-bed" data-reveal style="--i: 3;">
             <figure class="product-card__media" data-slot="prod-aurelia" data-alt="Aurelia Bed in draped ivory linen" style="margin: 0;">
               <img src="./assets/images/prod-aurelia-bed.jpg" width="1200" height="900" alt="Aurelia Bed crafted in solid warm timber with draped ivory linen" loading="lazy">
-              <button class="product-card__quickview" type="button" data-quickview="aurelia-bed">Quick View</button>
+              <button class="product-card__quickview" type="button" data-keep data-quickview="aurelia-bed">Quick View</button>
             </figure>
             <div class="product-card__body">
-              <div>
-                <h3 class="title-4 product-card__title">Aurelia Bed</h3>
-                <p class="caption-5 product-card__price num">From $2,600</p>
-              </div>
-              <button class="square-arrow square-arrow--outline" type="button" data-quickview="aurelia-bed" aria-label="Inspect Aurelia Bed">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-                </svg>
-              </button>
+              <h3 class="product-card__title">Aurelia Bed</h3>
+              <p class="product-card__price num">From $2,600</p>
             </div>
           </article>
 
           <article class="product-card" data-category="Dining" data-product-id="nora-sideboard" data-reveal style="--i: 4;">
             <figure class="product-card__media" data-slot="prod-nora" data-alt="Nora Cabinet in solid walnut with stoneware vessels" style="margin: 0;">
               <img src="./assets/images/prod-nora-sideboard.jpg" width="960" height="960" alt="Nora architectural walnut shelving cabinet holding ceramic stoneware vessels" loading="lazy">
-              <button class="product-card__quickview" type="button" data-quickview="nora-sideboard">Quick View</button>
+              <button class="product-card__quickview" type="button" data-keep data-quickview="nora-sideboard">Quick View</button>
             </figure>
             <div class="product-card__body">
-              <div>
-                <h3 class="title-4 product-card__title">Nora Cabinet</h3>
-                <p class="caption-5 product-card__price num">From $1,780</p>
-              </div>
-              <button class="square-arrow square-arrow--outline" type="button" data-quickview="nora-sideboard" aria-label="Inspect Nora Cabinet">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-                </svg>
-              </button>
+              <h3 class="product-card__title">Nora Cabinet</h3>
+              <p class="product-card__price num">From $1,780</p>
             </div>
           </article>
 
           <article class="product-card" data-category="Lighting" data-product-id="vale-lamp" data-reveal style="--i: 5;">
             <figure class="product-card__media" data-slot="prod-vale" data-alt="Vale Floor Lamp in brushed bronze" style="margin: 0;">
               <img src="./assets/images/prod-vale-lamp.jpg" width="1024" height="1024" alt="Vale Floor Lamp with minimalist brushed bronze dome shade beside neutral drapery" loading="lazy">
-              <button class="product-card__quickview" type="button" data-quickview="vale-lamp">Quick View</button>
+              <button class="product-card__quickview" type="button" data-keep data-quickview="vale-lamp">Quick View</button>
             </figure>
             <div class="product-card__body">
-              <div>
-                <h3 class="title-4 product-card__title">Vale Floor Lamp</h3>
-                <p class="caption-5 product-card__price num">From $480</p>
-              </div>
-              <button class="square-arrow square-arrow--outline" type="button" data-quickview="vale-lamp" aria-label="Inspect Vale Floor Lamp">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-                </svg>
-              </button>
+              <h3 class="product-card__title">Vale Floor Lamp</h3>
+              <p class="product-card__price num">From $480</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Section 7: Bespoke Consultation & Material Palette Banner -->
+    <!-- Section 8: Full-Bleed 50/50 Architectural Consultation Split -->
     <section class="palette-banner" id="materials" aria-labelledby="palette-heading">
-      <div class="container palette-grid">
+      <div class="palette-split">
         <div class="palette-copy" data-reveal style="--i: 0;">
-          <p class="palette-eyebrow">Private Consultation</p>
+          <p class="eyebrow">Private Consultation</p>
           <h2 class="heading-2 palette-title" id="palette-heading">Bring Quiet Craftsmanship Into Your Space</h2>
-          <p class="body-3 palette-desc">Work directly with our architectural studio on tailored spatial planning, bespoke joinery, and curated natural finishes.</p>
+          <p class="palette-desc">Work directly with our architectural studio on tailored spatial planning, bespoke joinery, and curated natural finishes.</p>
           <div class="palette-actions">
             <button class="btn-terracotta button-md" type="button" data-open-consultation>
               <span>Book a Consultation</span>
@@ -502,32 +400,18 @@
                 <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
               </svg>
             </button>
-            <button class="btn-cream-outline button-md" type="button" data-open-consultation="samples">Order Material Samples</button>
+            <button class="text-action palette-text-link" type="button" data-open-consultation="samples">
+              <span>Order Material Samples</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+              </svg>
+            </button>
           </div>
         </div>
 
-        <div class="swatch-grid" data-reveal style="--i: 1;">
-          <div class="swatch-tile">
-            <div class="swatch-tile__surface swatch-tile__surface--oak">
-              <img src="./assets/images/craft-joinery.jpg" width="960" height="960" alt="Smoked Oak timber grain swatch" loading="lazy">
-            </div>
-            <span class="swatch-tile__label">Smoked Oak</span>
-          </div>
-          <div class="swatch-tile">
-            <div class="swatch-tile__surface swatch-tile__surface--travertine" aria-hidden="true"></div>
-            <span class="swatch-tile__label">Natural Travertine</span>
-          </div>
-          <div class="swatch-tile">
-            <div class="swatch-tile__surface swatch-tile__surface--linen">
-              <img src="./assets/images/detail-boucle.jpg" width="1024" height="1024" alt="Woven Linen upholstery swatch" loading="lazy">
-            </div>
-            <span class="swatch-tile__label">Woven Linen</span>
-          </div>
-          <div class="swatch-tile">
-            <div class="swatch-tile__surface swatch-tile__surface--bronze" aria-hidden="true"></div>
-            <span class="swatch-tile__label">Brushed Bronze</span>
-          </div>
-        </div>
+        <figure class="palette-media" data-slot="consultation-split" data-alt="Sunlit living room interior" style="margin: 0;">
+          <img src="./assets/images/space-living.jpg" width="1200" height="900" alt="Sunlit architectural living space with timber beams, stone pillars, and natural linen seating" loading="lazy">
+        </figure>
       </div>
     </section>
   </main>
