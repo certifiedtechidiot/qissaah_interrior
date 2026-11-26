@@ -27,7 +27,7 @@
   top: var(--space-md);
 }
 
-/* Header Navigation — Transparent Overlay over Hero, Warm Alabaster on Scroll */
+/* Header Navigation — Transparent Overlay at Top, Warm Cream Frosted-Glass on Scroll (40px+) */
 .site-header {
   position: fixed;
   top: 0;
@@ -35,14 +35,18 @@
   right: 0;
   z-index: var(--z-sticky-nav);
   background-color: transparent;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
   color: var(--color-ivory);
   border-bottom: 1px solid var(--hero-nav-rule);
-  transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out);
+  transition: background-color 260ms var(--ease-out), color 260ms var(--ease-out), border-color 260ms var(--ease-out), backdrop-filter 260ms var(--ease-out);
 }
 
 .site-header.is-scrolled,
 .is-solid-header .site-header {
-  background-color: var(--color-paper);
+  background-color: rgba(250, 248, 245, 0.90);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   color: var(--color-ink);
   border-bottom-color: var(--color-rule);
 }

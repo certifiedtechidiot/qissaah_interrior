@@ -92,15 +92,13 @@
 
   const savedIds = new Set();
 
-  /* 0. Overlay Header Scroll Transition */
+  /* 0. Overlay Header Scroll Transition (30-50px threshold) */
   const siteHeader = document.getElementById('site-header');
-  const heroEl = document.querySelector('.hero');
-  if (siteHeader && heroEl) {
+  if (siteHeader) {
     let navTicking = false;
     const syncHeaderState = () => {
       navTicking = false;
-      const rect = heroEl.getBoundingClientRect();
-      siteHeader.classList.toggle('is-scrolled', rect.bottom <= 84);
+      siteHeader.classList.toggle('is-scrolled', window.scrollY > 40);
     };
     window.addEventListener('scroll', () => {
       if (!navTicking) {
@@ -108,9 +106,6 @@
         requestAnimationFrame(syncHeaderState);
       }
     }, { passive: true });
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(syncHeaderState, { rootMargin: '-84px 0px 0px 0px', threshold: 0 }).observe(heroEl);
-    }
     syncHeaderState();
   }
 
