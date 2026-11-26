@@ -1709,34 +1709,85 @@
   }
 }
 
-@media (max-width: 40rem) {
-  .intro-grid,
-  .spaces-grid,
-  .proof-strip,
-  .products-grid,
-  .footer-grid {
+@media (max-width: 768px) {
+  .intro-grid {
     grid-template-columns: minmax(0, 1fr);
   }
-  .proof-item {
-    justify-content: flex-start;
+  .hero {
+    min-height: 82dvh;
   }
-  .proof-item::after {
-    display: none;
+  .hero__scrim {
+    background: linear-gradient(180deg, rgba(16, 22, 17, 0.55) 0%, rgba(16, 22, 17, 0.35) 50%, rgba(16, 22, 17, 0.70) 100%);
+  }
+  .hero__content {
+    max-width: 100%;
   }
   .section-head {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-md);
   }
-  .hero {
-    min-height: 82dvh;
+  /* 2x2 Metrics Ledger with cross-hairline dividers */
+  .proof-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
   }
-  .hero__scrim {
-    background:
-      linear-gradient(180deg, var(--hero-top-scrim) 0%, var(--hero-top-mid) 26%, transparent 46%),
-      linear-gradient(90deg, var(--hero-scrim-start) 0%, var(--hero-scrim-mid) 82%, var(--hero-scrim-soft) 100%);
+  .proof-item {
+    justify-content: center;
+    padding: var(--space-lg) var(--space-sm);
   }
-  .hero__content {
-    max-width: 100%;
+  .proof-item::after {
+    display: none;
+  }
+  .proof-item:nth-child(odd) {
+    border-right: 1px solid rgba(30, 40, 33, 0.14);
+  }
+  .proof-item:nth-child(1),
+  .proof-item:nth-child(2) {
+    border-bottom: 1px solid rgba(30, 40, 33, 0.14);
+  }
+  /* Horizontal snap-scroll Spaces Carousel (78vw cards) */
+  .spaces-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding-bottom: var(--space-xs);
+    scrollbar-width: none;
+  }
+  .spaces-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .space-card {
+    flex: 0 0 78vw;
+    scroll-snap-align: start;
+  }
+  /* 2-Column Product Grid on mobile */
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .product-card__body {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding-top: var(--space-sm);
+  }
+  .product-card__title {
+    font-size: 1.0625rem;
+    line-height: 1.2;
+  }
+  .product-card__price {
+    font-size: 0.8125rem;
+  }
+  /* 2-Column Mobile Footer Nav */
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-xl) var(--space-lg);
+  }
+  .footer-grid > :first-child,
+  .footer-grid > :last-child {
+    grid-column: 1 / -1;
   }
 }
