@@ -1,0 +1,144 @@
+:root {
+  color-scheme: light;
+
+  /* Spacing scale (aligned to Tailwind & AI Design Skill B2 + Hallmark tokens) */
+  --space-0: 0px;
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 40px;
+  --space-3xl: 48px;
+  --space-4xl: 64px;
+  --space-5xl: 80px;
+  --space-6xl: 96px;
+  --section-gap-s: 80px;
+  --section-gap: 96px;
+  --section-gap-l: 128px;
+
+  /* Type scale (Tailwind scale steps + fluid responsive clamps) */
+  --text-xs: 0.75rem;      /* 12px / 16px */
+  --text-sm: 0.875rem;     /* 14px / 20px */
+  --text-md: 1rem;         /* 16px / 24px */
+  --text-lg: 1.125rem;     /* 18px / 28px */
+  --text-xl: 1.25rem;      /* 20px / 28px */
+  --text-2xl: 1.5rem;      /* 24px / 32px */
+  --text-3xl: 1.875rem;    /* 30px / 36px */
+  --text-4xl: 2.25rem;     /* 36px / 40px */
+  --text-5xl: 3rem;        /* 48px / 48px */
+  --text-6xl: 3.75rem;     /* 60px / 60px */
+  --text-7xl: 4.5rem;      /* 72px / 72px */
+
+  /* Semantic typography roles */
+  --text-display: var(--text-6xl);
+  --text-display-s: var(--text-5xl);
+  --text-section: var(--text-4xl);
+  --text-title: var(--text-xl);
+  --text-lead: var(--text-lg);
+
+  /* Motion (AI Design Skill B7 base curve & durations) */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 200ms;
+  --dur-short: 300ms;
+  --dur-long: 500ms;
+  --dur-reveal: 680ms;
+
+  /* Palette — Warm Alabaster, Honed Stone & Deep Espresso (OKLCH) */
+  --color-paper: oklch(96.3% 0.008 78);
+  --color-paper-2: oklch(93.4% 0.011 76);
+  --color-paper-3: oklch(89.5% 0.013 74);
+  --color-card: oklch(98.2% 0.005 80);
+  --color-card-edge: oklch(88.2% 0.011 74);
+
+  --color-ink: oklch(18.5% 0.010 62);
+  --color-ink-2: oklch(39% 0.012 62);
+  --color-muted: oklch(52% 0.011 64);
+  --color-rule: oklch(85.5% 0.011 74);
+
+  /* Footer & Dark Surface Tokens */
+  --color-obsidian: oklch(15.5% 0.008 62);
+  --color-obsidian-2: oklch(21.5% 0.010 62);
+  --color-obsidian-rule: oklch(29% 0.010 62);
+  --color-ivory: oklch(96.8% 0.006 78);
+  --color-ivory-muted: oklch(74% 0.010 72);
+
+  /* Accent (Cool Slate & Architectural Bronze Focus — avoids Gate 65 clay) */
+  --color-accent: oklch(38% 0.055 248);
+  --color-accent-ink: oklch(96.8% 0.006 78);
+  --color-focus: oklch(48% 0.090 248);
+  --color-error: oklch(52% 0.175 27);
+  --color-success: oklch(48% 0.115 152);
+
+  /* Scrims & Shadows */
+  --hero-scrim-start: oklch(15% 0.010 62 / 0.72);
+  --hero-scrim-mid: oklch(15% 0.010 62 / 0.42);
+  --hero-scrim-end: oklch(15% 0.010 62 / 0.14);
+  --hero-bar-bg: oklch(98% 0.004 80 / 0.16);
+  --hero-bar-track: oklch(98% 0.004 80 / 0.35);
+  --modal-backdrop: oklch(14% 0.010 62 / 0.58);
+  --shadow-card: 0 2px 10px -2px oklch(20% 0.015 62 / 0.06);
+  --shadow-floating: 0 12px 32px -8px oklch(16% 0.012 62 / 0.12);
+  --shadow-modal: 0 24px 64px -16px oklch(14% 0.012 62 / 0.28);
+
+  /* Typography */
+  --font-display: "EB Garamond", Georgia, serif;
+  --font-body: "Manrope", system-ui, sans-serif;
+  --font-outlier: "EB Garamond", Georgia, serif;
+
+  --tracking-display: -0.02em;
+  --tracking-heading: -0.015em;
+  --display-weight: 500;
+  --heading-weight: 500;
+
+  /* Container & Grid */
+  --container: 1360px;
+  --gutter: 48px;
+  --gap-columns: 24px;
+
+  /* Radii (Tailwind scale + nested formula: inner = outer - 8px padding) */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-card: 16px;
+  --radius-pill: 9999px;
+
+  --rule-hair: 1px;
+  --rule-head: 1px;
+
+  /* Z-index stack */
+  --z-base: 1;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-sticky-nav: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+}
+
+@media (max-width: 64rem) {
+  :root {
+    --text-display: var(--text-5xl);
+    --text-section: var(--text-3xl);
+    --gutter: 24px;
+    --gap-columns: 16px;
+    --section-gap-s: 64px;
+    --section-gap: 72px;
+  }
+}
+
+@media (max-width: 40rem) {
+  :root {
+    --text-display: var(--text-4xl);
+    --text-section: var(--text-3xl);
+    --gutter: 16px;
+    --gap-columns: 16px;
+    --section-gap-s: 48px;
+    --section-gap: 64px;
+  }
+}

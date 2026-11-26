@@ -1,6 +1,6 @@
-# Qissaah Interiors
+# Qissaah Interior
 
-Showcase website for **Qissaah Interiors**, featuring made to order architectural furniture, cast brass lighting, natural stone objects, and timber millwork.
+Editorial luxury interior architecture and bespoke furniture showcase for **Qissaah Interior**.
 
 ## Running Locally
 
@@ -8,21 +8,24 @@ Showcase website for **Qissaah Interiors**, featuring made to order architectura
 node serve.js
 ```
 
-Open `http://localhost:3100` in your browser.
+Open `http://localhost:3100` in your browser (or serve statically via `python -m http.server 8000`).
 
 ## Structure
 
-- `index.html`: Main single-page showcase and interactive collection catalog
+- `index.html`: Main landing experience featuring the 3-scene hero lookbook, editorial overview collage, studio benchmarks, space explorer grid, interactive brand story chapters, scroll-lit tagline reveal, curated product catalog with filters, and consultation/inquiry modals
 - `404.html`: Branded fallback page
-- `tokens.css`: OKLCH warm-tinted dark stone and bronze design tokens, spacing scale, and motion curves
-- `styles.css`: Perimeter HUD hero, B11 tagline reveal, asymmetric capabilities, CSS-counter process wells, collection grid, material table, FAQ, and dialogs
-- `app.js`: Tagline reveal observer, collection category filter, piece spec lightbox, policy modal, mobile drawer, and form validation
-- `serve.js`: Zero-dependency Node local HTTP static server
-- `assets/`: Locally hosted photography and `lenis.min.js`
+- `styles/tokens.css`: OKLCH warm limestone, honed stone, and espresso ink tokens, Tailwind-aligned type and spacing scales, and motion curves
+- `styles/base.css`: Reset, typography classes, accessible focus defaults, and reduced-motion safeguards
+- `styles/style.css`: Layout grid, responsive breakpoints, card geometry, interactive drawers, and Hallmark compliance annotations
+- `scripts/main.js`: Hero slider, story chapter switcher, collection category filter, quick-view product modal, saved inquiry bag, studio search, and client-side form validation
+- `assets/`: Brand SVG favicon and locally hosted high-resolution interior imagery (`assets/images/`)
+- `serve.js`: Zero-dependency Node local static HTTP server
 
 ## Image Credits
 
-All bundled photographs in `assets/` are CC BY-SA 4.0 works from Wikimedia Commons (credited in the page footer):
+Room photography combines custom-generated architectural renders with CC BY-SA 4.0 architectural plates from Wikimedia Commons (credited in the page footer):
 
+- Clairecato321 (Wikimedia Commons)
+- Velvet (Wikimedia Commons)
 - Basile Morin (Wikimedia Commons)
-- W.carter (Wikimedia Commons)
+- LoMit (Wikimedia Commons)
